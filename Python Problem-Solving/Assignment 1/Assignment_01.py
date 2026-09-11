@@ -3,7 +3,7 @@ def user_input():
         try:
             salary = float(input("Enter the salary: "))
             expense = float(input("Enter expense: "))
-            note = input("If any note, enter here... ")
+            note = input("If any note, enter here ")
 
             if salary <= 0 or expense <= 0:
                 print("Salary and expense must be positive.")
@@ -41,9 +41,9 @@ def calculation(salary,expense,note):
 
 def print_report(report):
     print("\n----- Personal Finance Report -----")
-    print(f"Salary: ₹{report['salary']:,.2f}")
-    print(f"Expense: ₹{report['expense']:,.2f}")
-    print(f"Remaining: ₹{report['remaining']:,.2f}")
+    print(f"Salary: ₹{report['salary']:.2f}")
+    print(f"Expense: ₹{report['expense']:.2f}")
+    print(f"Remaining: ₹{report['remaining']:.2f}")
     print(f"Savings: {report['percentage']:.2f}%")
     print(f"Status: {report['state']}")
     print(f"Note: {report['note']}")
@@ -56,6 +56,6 @@ def main():
 
     print_report(report)
 
-
+print(__name__)  
 if __name__ == "__main__":
     main()
