@@ -1,5 +1,5 @@
 # #os and how to get the current working directory
-# import os
+import os
 
 # cur_folder = os.getcwd()
 # print(cur_folder)
@@ -35,4 +35,42 @@ with open ("final_report.txt","w") as student_info, open("second_report.txt","w"
 
 
     
-    
+
+#task 2 for this file
+
+def input_Collection():
+    file_name = input("Enter the file name: ")
+    location = input("Enter the location: ")
+    full_path = os.path.join(location,file_name)
+
+    with open(full_path,"w") as My_file:
+        input_number = int(input("Enter the number of line you want: "))
+        for i in range(input_number):
+            data = input("Enter data: ")
+            My_file.write(f"{data}\n")
+
+    with open(full_path,"r") as My_file:
+        all_lines = My_file.readlines()
+
+
+    Line_count = 0
+    Word_count = 0
+    char_with_space = 0
+    char_without_spaces = 0
+
+
+    for line in all_lines:
+        Line_count += 1
+
+        clean_line = line.strip('\n')
+
+        char_with_space += len(clean_line)
+
+        char_without_spaces += len(clean_line.replace(" ",""))
+
+        Word_count += len(clean_line.split()) 
+
+    print(f"total number of char in this file with space: {char_with_space} and without space: {char_without_spaces} ")
+
+
+input_Collection()
