@@ -70,7 +70,7 @@ def input_Collection():
 
         Word_count += len(clean_line.split()) 
 
-    print(f"total number of char in this file with space: {char_with_space} and without space: {char_without_spaces} ")
+    print(f"total number of char in this file with space: {char_with_space} and without space: {char_without_spaces} and there is total of {Word_count} number of word")
 
 
 input_Collection()
