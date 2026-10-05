@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f4f9; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .card { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); width: 300px; }
+        h2 { text-align: center; color: #333; }
+        label { font-size: 14px; color: #666; }
+        input { width: 100%; padding: 10px; margin: 8px 0 20px 0; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        button { width: 100%; background-color: #28a745; color: white; padding: 10px; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; }
+        button:hover { background-color: #218838; }
+        .link { text-align: center; margin-top: 15px; font-size: 14px; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>Create Account</h2>
+        <!-- method="POST" is what Flask needs to securely read the data -->
+        <form method="POST" action="/signup">
+            <label for="username">Username:</label>
+            <input type="text" name="username" id="username" placeholder="Enter username here" required> 
+            
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" placeholder="Enter email here" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" placeholder="Enter password here" required>
+            
+            <button type="submit">Sign Up</button>
+        </form>
+        <div class="link">
+            Already have an account? <a href="/login">Login here</a>
+        </div>
+    </div>
+</body>
+</html>
