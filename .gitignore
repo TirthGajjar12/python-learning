@@ -1,0 +1,2 @@
+# Ignore the large movie dataset file
+data_analytics/Movies_data_analysis/Data/movies.csv
